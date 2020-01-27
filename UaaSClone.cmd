@@ -1,0 +1,1 @@
+git clone https://dev-cloud-daniel-molloy-everest-media-co-uk.scm.s1.umbraco.io/99109272-101b-4bb1-bf38-372a5fbf198c.git MyCloudSite.Web

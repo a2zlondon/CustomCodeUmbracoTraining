@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>  
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+	
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="XCOPY /s /y &quot;$(TargetDir)$(ProjectName).*&quot; &quot;$(ProjectDir)\..\$(SolutionName).Web\bin\&quot;" />
+  </Target>
+
+	<ItemGroup>
+		<PackageReference Include="octokit" Version="0.36.0" />
+		<PackageReference Include="UmbracoCms.Core" Version="8.4.0" />
+		<PackageReference Include="UmbracoCms.Web" Version="8.4.0" />
+	</ItemGroup>
+</Project>
